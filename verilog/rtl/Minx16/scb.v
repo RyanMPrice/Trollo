@@ -80,12 +80,12 @@ module SCB_memory (
 endmodule
 
 module dfsimpleram #(
-  parameter A = 8
+  parameter M = 8
 , parameter D = 8
 ) (
   input              CLK
 
-, input      [A-1:0] A
+, input      [M-1:0] A
 , input      [D-1:0] D
 , output reg [D-1:0] Q
 , input              CEN
@@ -93,7 +93,7 @@ module dfsimpleram #(
 , input      [D-1:0] WEN
 );
   
-  reg [D-1:0] mem [2**A-1:0];
+  reg [D-1:0] mem [(2**M)-1:0];
   
   always @ (posedge clk)
     if( cen == 1'b0 )
