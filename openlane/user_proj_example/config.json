@@ -3,7 +3,7 @@
     "DESIGN_IS_CORE": 0,
     "VERILOG_FILES": ["dir::../../verilog/rtl/defines.v", "dir::../../verilog/rtl/user_proj_example.v", "dir::../../verilog/rtl/Minx16/*"],
     "CLOCK_PERIOD": 50,
-    "CLOCK_PORT": "wb_clk_i, clk_i",
+    "CLOCK_PORT": "wb_clk_i",
     "CLOCK_NET": "counter.clk, cpu16.clk_i",
     "FP_SIZING": "absolute",
     "DIE_AREA": "0 0 2300 2300",
