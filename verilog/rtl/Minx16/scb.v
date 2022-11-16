@@ -1,4 +1,5 @@
-//Design for 1024x16 or 2kb of onboard memory scratchpad
+//Design for 0x0800 of onboard memory scratchpad
+//
 module SCB_memory (
   input               clk_i
 , input               rst_i
@@ -32,7 +33,8 @@ module SCB_memory (
   assign scb_rdy_o  = 1'b1;
   assign scb_Data_o = (highSelect) ? dboh :dbol;
   
-  gf180mcu_fd_ip_sram__sram512x8m8wm1 oddMemLow  (
+  //gf180mcu_fd_ip_sram__sram512x8m8wm1 oddMemLow  (
+  dfsimpleram #(9, 8) oddMemLow  (
     .CLK (clk_i)
   , .CEN (~(oddSelect & lowSelect))
   , .GWEN(~scb_ce_i | scb_wr_i)
@@ -42,7 +44,8 @@ module SCB_memory (
   , .Q   (dbolo)
   );
   
-  gf180mcu_fd_ip_sram__sram512x8m8wm1 oddMemHigh (
+  //gf180mcu_fd_ip_sram__sram512x8m8wm1 oddMemHigh (
+  dfsimpleram #(9, 8) oddMemHigh (
     .CLK (clk_i)
   , .CEN (~(oddSelect & highSelect))
   , .GWEN(~scb_ce_i | scb_wr_i)
@@ -52,7 +55,8 @@ module SCB_memory (
   , .Q   (dbohi)
   );
   
-  gf180mcu_fd_ip_sram__sram512x8m8wm1 evenMemLow (
+  //gf180mcu_fd_ip_sram__sram512x8m8wm1 evenMemLow (
+  dfsimpleram #(9, 8) evenMemLow (
     .CLK (clk_i)
   , .CEN (~(evenSelect & lowSelect))
   , .GWEN(~scb_ce_i | scb_wr_i)
@@ -62,7 +66,8 @@ module SCB_memory (
   , .Q   (dbelo)
   );
   
-  gf180mcu_fd_ip_sram__sram512x8m8wm1 evenMemHigh(
+  //gf180mcu_fd_ip_sram__sram512x8m8wm1 evenMemHigh (
+  dfsimpleram #(9, 8) evenMemHigh(
     .CLK (clk_i)
   , .CEN (~(evenSelect & highSelect))
   , .GWEN(~scb_ce_i | scb_wr_i)
@@ -74,3 +79,28 @@ module SCB_memory (
   
 endmodule
 
+module dfsimpleram #(
+  parameter A = 8
+, parameter D = 8
+) (
+  input              CLK
+
+, input      [A-1:0] A
+, input      [D-1:0] D
+, output reg [D-1:0] Q
+, input              CEN
+, input              GWEN
+, input      [D-1:0] WEN
+);
+  
+  reg [D-1:0] mem [2**A-1:0];
+  
+  always @ (posedge clk)
+    if( cen == 1'b0 )
+      dbo = mem[addr];
+  
+  always @ (posedge clk)
+    if( gwen == 1'b0 && cen == 1'b0 )
+      mem[addr] = dbi;
+  
+endmodule

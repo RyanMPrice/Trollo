@@ -104,9 +104,10 @@ module user_proj_example #(
   wire [`MPRJ_IO_PADS-1:0] io_oeb;
   
   wire [1:0] mode = io_in[37:36];
+  wire clk_i = io_in [33];
   
   Minx16Top cpu16 (
-      .clk_i       (io_in [33])
+      .clk_i       (clk_i)
     , .rst_i       (io_in [32])
     
     , .dbus_ADBus_i(io_in [31:16])
@@ -133,37 +134,6 @@ module user_proj_example #(
     , .nmia_o      (io_out[35])
   );
   
-endmodule
-
-(* blackbox *)
-module Minx16Top (
-  input              clk_i
-, input              rst_i
-
-, input       [15:0] dbus_ADBus_i
-, output wire [15:0] dbus_ADBus_o
-, output wire [15:0] dbus_ADBus_e
-, output wire        dbus_ale_o
-, output wire        dbus_ale_e
-, output wire        dbus_dle_o
-, output wire        dbus_dle_e
-, output wire [ 1:0] dbus_stb_o
-, output wire [ 1:0] dbus_stb_e
-, output wire        dbus_rd_o
-, output wire        dbus_rd_e
-, output wire        dbus_wr_o
-, output wire        dbus_wr_e
-, input              dbus_rdy_i
-
-, input              dbus_req_i
-, output wire        dbus_ack_o
-
-, input              intr_i
-, output wire        inta_o
-, input              nmir_i
-, output wire        nmia_o
-);
-
 endmodule
 
 module counter #(
