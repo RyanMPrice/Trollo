@@ -81,19 +81,19 @@ endmodule
 
 module dfsimpleram #(
   parameter M = 8
-, parameter D = 8
+, parameter L = 8
 ) (
   input              CLK
 
 , input      [M-1:0] A
-, input      [D-1:0] D
-, output reg [D-1:0] Q
+, input      [L-1:0] D
+, output reg [L-1:0] Q
 , input              CEN
 , input              GWEN
-, input      [D-1:0] WEN
+, input      [L-1:0] WEN
 );
   
-  reg [D-1:0] mem [(2**M)-1:0];
+  reg [L-1:0] mem [(2**M)-1:0];
   
   always @ (posedge clk)
     if( cen == 1'b0 )
