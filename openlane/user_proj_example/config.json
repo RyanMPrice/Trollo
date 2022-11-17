@@ -2,7 +2,7 @@
     "DESIGN_NAME": "user_proj_example",
     "DESIGN_IS_CORE": 0,
     "VERILOG_FILES": ["dir::../../verilog/rtl/defines.v", "dir::../../verilog/rtl/user_proj_example.v", "dir::../../verilog/rtl/Minx16/*"],
-    "CLOCK_PERIOD": 50,
+    "CLOCK_PERIOD": 10,
     "CLOCK_PORT": "wb_clk_i",
     "CLOCK_NET": "counter.clk, cpu16.clk_i",
     "FP_SIZING": "absolute",
@@ -15,6 +15,7 @@
     "DIODE_INSERTION_STRATEGY": 4,
     "RUN_CVC": 1,
     "pdk::sky130*": {
+        "SYNTH_MAX_FANOUT": 5,
         "FP_CORE_UTIL": 45,
         "RT_MAX_LAYER": "met4",
         "scl::sky130_fd_sc_hd": {

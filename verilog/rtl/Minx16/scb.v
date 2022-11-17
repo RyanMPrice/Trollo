@@ -34,15 +34,15 @@ module SCB_memory (
   assign scb_Data_o = (highSelect) ? dboh :dbol;
   
   //gf180mcu_fd_ip_sram__sram512x8m8wm1 oddMemLow  (
-  dfsimpleram #(9, 8) oddMemLow  (
-    .CLK (clk_i)
-  , .CEN (~(oddSelect & lowSelect))
-  , .GWEN(~scb_ce_i | scb_wr_i)
-  , .WEN (8'h00)
-  , .A   (addr)
-  , .D   (dbhi)
-  , .Q   (dbolo)
-  );
+  //dfsimpleram #(9, 8) oddMemLow  (
+  //  .CLK (clk_i)
+  //, .CEN (~(oddSelect & lowSelect))
+  //, .GWEN(~scb_ce_i | scb_wr_i)
+  //, .WEN (8'h00)
+  //, .A   (addr)
+  //, .D   (dbhi)
+  //, .Q   (dbolo)
+  //);
   
   //gf180mcu_fd_ip_sram__sram512x8m8wm1 oddMemHigh (
   dfsimpleram #(9, 8) oddMemHigh (
@@ -56,15 +56,15 @@ module SCB_memory (
   );
   
   //gf180mcu_fd_ip_sram__sram512x8m8wm1 evenMemLow (
-  dfsimpleram #(9, 8) evenMemLow (
-    .CLK (clk_i)
-  , .CEN (~(evenSelect & lowSelect))
-  , .GWEN(~scb_ce_i | scb_wr_i)
-  , .WEN (8'h00)
-  , .A   (addr)
-  , .D   (dblo)
-  , .Q   (dbelo)
-  );
+  //dfsimpleram #(9, 8) evenMemLow (
+  //  .CLK (clk_i)
+  //, .CEN (~(evenSelect & lowSelect))
+  //, .GWEN(~scb_ce_i | scb_wr_i)
+  //, .WEN (8'h00)
+  //, .A   (addr)
+  //, .D   (dblo)
+  //, .Q   (dbelo)
+  //);
   
   //gf180mcu_fd_ip_sram__sram512x8m8wm1 evenMemHigh (
   dfsimpleram #(9, 8) evenMemHigh(
