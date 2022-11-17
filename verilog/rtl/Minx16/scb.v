@@ -45,15 +45,15 @@ module SCB_memory (
   //);
   
   //gf180mcu_fd_ip_sram__sram512x8m8wm1 oddMemHigh (
-  dfsimpleram #(9, 8) oddMemHigh (
-    .CLK (clk_i)
-  , .CEN (~(oddSelect & highSelect))
-  , .GWEN(~scb_ce_i | scb_wr_i)
-  , .WEN (8'h00)
-  , .A   (addr)
-  , .D   (dbhi)
-  , .Q   (dbohi)
-  );
+  //dfsimpleram #(9, 8) oddMemHigh (
+  //  .CLK (clk_i)
+  //, .CEN (~(oddSelect & highSelect))
+  //, .GWEN(~scb_ce_i | scb_wr_i)
+  //, .WEN (8'h00)
+  //, .A   (addr)
+  //, .D   (dbhi)
+  //, .Q   (dbohi)
+  //);
   
   //gf180mcu_fd_ip_sram__sram512x8m8wm1 evenMemLow (
   //dfsimpleram #(9, 8) evenMemLow (
@@ -67,40 +67,40 @@ module SCB_memory (
   //);
   
   //gf180mcu_fd_ip_sram__sram512x8m8wm1 evenMemHigh (
-  dfsimpleram #(9, 8) evenMemHigh(
-    .CLK (clk_i)
-  , .CEN (~(evenSelect & highSelect))
-  , .GWEN(~scb_ce_i | scb_wr_i)
-  , .WEN (8'h00)
-  , .A   (addr)
-  , .D   (dblo)
-  , .Q   (dbehi)
-  );
+  //dfsimpleram #(9, 8) evenMemHigh(
+  //  .CLK (clk_i)
+  //, .CEN (~(evenSelect & highSelect))
+  //, .GWEN(~scb_ce_i | scb_wr_i)
+  //, .WEN (8'h00)
+  //, .A   (addr)
+  //, .D   (dblo)
+  //, .Q   (dbehi)
+  //);
   
 endmodule
 
-module dfsimpleram #(
-  parameter M = 8
-, parameter L = 8
-) (
-  input              CLK
-
-, input      [M-1:0] A
-, input      [L-1:0] D
-, output reg [L-1:0] Q
-, input              CEN
-, input              GWEN
-, input      [L-1:0] WEN
-);
-  
-  reg [L-1:0] mem [(2**M)-1:0];
-  
-  always @ (posedge clk)
-    if( cen == 1'b0 )
-      dbo = mem[addr];
-  
-  always @ (posedge clk)
-    if( gwen == 1'b0 && cen == 1'b0 )
-      mem[addr] = dbi;
-  
-endmodule
+//module dfsimpleram #(
+//  parameter M = 8
+//, parameter L = 8
+//) (
+//  input              CLK
+//
+//, input      [M-1:0] A
+//, input      [L-1:0] D
+//, output reg [L-1:0] Q
+//, input              CEN
+//, input              GWEN
+//, input      [L-1:0] WEN
+//);
+//  
+//  reg [L-1:0] mem [(2**M)-1:0];
+//  
+//  always @ (posedge clk)
+//    if( cen == 1'b0 )
+//      dbo = mem[addr];
+//  
+//  always @ (posedge clk)
+//    if( gwen == 1'b0 && cen == 1'b0 )
+//      mem[addr] = dbi;
+//  
+//endmodule

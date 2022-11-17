@@ -7,3 +7,4 @@
 *.vcd
 *.gtkw
 caravel/
+mgmt_core_wrapper/
