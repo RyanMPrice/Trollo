@@ -1,5 +1,17 @@
 # Caravel user project includes
 -v $(USER_PROJECT_VERILOG)/rtl/user_project_wrapper.v	     
 -v $(USER_PROJECT_VERILOG)/rtl/user_proj_example.v
-
+-v $(USER_PROJECT_VERILOG)/rtl/Minx16/Alu.v
+-v $(USER_PROJECT_VERILOG)/rtl/Minx16/Biu16.v
+-v $(USER_PROJECT_VERILOG)/rtl/Minx16/Controller.v
+-v $(USER_PROJECT_VERILOG)/rtl/Minx16/FlagRegister.v
+-v $(USER_PROJECT_VERILOG)/rtl/Minx16/Minx16Cpu.v
+-v $(USER_PROJECT_VERILOG)/rtl/Minx16/Minx16Top.v
+-v $(USER_PROJECT_VERILOG)/rtl/Minx16/MinxFoldedBus1616.v
+-v $(USER_PROJECT_VERILOG)/rtl/Minx16/ParametricRegister.v
+-v $(USER_PROJECT_VERILOG)/rtl/Minx16/ProgramCounter.v
+-v $(USER_PROJECT_VERILOG)/rtl/Minx16/RegFile.v
+-v $(USER_PROJECT_VERILOG)/rtl/Minx16/scb.v
+-v $(USER_PROJECT_VERILOG)/rtl/Minx16/StackPointer.v
+-v $(USER_PROJECT_VERILOG)/rtl/Minx16/trapAddr.v
  
