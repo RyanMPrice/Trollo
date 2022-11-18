@@ -87,9 +87,12 @@ jobs:
           make openlane
           make simenv
 
-      - name: Harden using Openlane
+      - name: Harden user_proj using Openlane
         run: |
           make user_proj_example
+
+      - name: Harden user_project_wrapper using Openlane
+        run: |
           make user_project_wrapper
 
       - name: run precheck
@@ -177,11 +180,14 @@ jobs:
           make openlane
           make simenv
 
-      - name: Harden using Openlane
+      - name: Harden user_proj using Openlane
         run: |
           make user_proj_example
-          make user_project_wrapper
 
+      - name: Harden user_project_wrapper using Openlane
+        run: |
+          make user_project_wrapper
+      
       - name: run precheck
         run: |
           export INPUT_DIRECTORY=$(pwd)

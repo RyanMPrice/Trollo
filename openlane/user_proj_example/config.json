@@ -6,7 +6,7 @@
     "CLOCK_PORT": "wb_clk_i",
     "CLOCK_NET": "counter.clk, cpu16.clk_i",
     "FP_SIZING": "absolute",
-    "DIE_AREA": "0 0 2400 3000",
+    "DIE_AREA": "0 0 2000 3000",
     "FP_PIN_ORDER_CFG": "dir::pin_order.cfg",
     "PL_BASIC_PLACEMENT": 0,
     "PL_TARGET_DENSITY": 0.55,
