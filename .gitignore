@@ -8,3 +8,4 @@
 *.gtkw
 venv/
 mgmt_core_wrapper/
+deps/timing-scripts/
