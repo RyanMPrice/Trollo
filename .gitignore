@@ -6,5 +6,5 @@
 *.lst
 *.vcd
 *.gtkw
-venv
+venv/
 mgmt_core_wrapper/
