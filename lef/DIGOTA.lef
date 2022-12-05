@@ -1,0 +1,124 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO DIGOTA
+  CLASS BLOCK ;
+  FOREIGN DIGOTA ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 50.000 BY 50.000 ;
+  PIN INmb
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 24.640 0.000 25.200 4.000 ;
+    END
+  END INmb
+  PIN INpb
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 8.400 0.000 8.960 4.000 ;
+    END
+  END INpb
+  PIN cmnmos
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 36.960 4.000 37.520 ;
+    END
+  END cmnmos
+  PIN cmpmos
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 12.320 4.000 12.880 ;
+    END
+  END cmpmos
+  PIN oe
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 40.880 0.000 41.440 4.000 ;
+    END
+  END oe
+  PIN onmos
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 36.960 46.000 37.520 50.000 ;
+    END
+  END onmos
+  PIN opmos
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 12.320 46.000 12.880 50.000 ;
+    END
+  END opmos
+  PIN vdd
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal4 ;
+        RECT 10.470 15.380 12.070 31.660 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 19.570 15.380 21.170 31.660 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 28.670 15.380 30.270 31.660 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 37.770 15.380 39.370 31.660 ;
+    END
+  END vdd
+  PIN vss
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal4 ;
+        RECT 15.020 15.380 16.620 31.660 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 24.120 15.380 25.720 31.660 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 33.220 15.380 34.820 31.660 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 42.320 15.380 43.920 31.660 ;
+    END
+  END vss
+  OBS
+      LAYER Metal1 ;
+        RECT 6.720 15.380 43.920 31.660 ;
+      LAYER Metal2 ;
+        RECT 8.540 45.700 12.020 46.000 ;
+        RECT 13.180 45.700 36.660 46.000 ;
+        RECT 37.820 45.700 43.780 46.000 ;
+        RECT 8.540 4.300 43.780 45.700 ;
+        RECT 9.260 4.000 24.340 4.300 ;
+        RECT 25.500 4.000 40.580 4.300 ;
+        RECT 41.740 4.000 43.780 4.300 ;
+      LAYER Metal3 ;
+        RECT 4.300 36.660 43.830 37.380 ;
+        RECT 4.000 13.180 43.830 36.660 ;
+        RECT 4.300 12.460 43.830 13.180 ;
+  END
+END DIGOTA
+END LIBRARY
+

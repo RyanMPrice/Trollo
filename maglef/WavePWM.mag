@@ -1,0 +1,83 @@
+magic
+tech gf180mcuC
+magscale 1 10
+timestamp 1670260723
+<< obsm1 >>
+rect 1344 2942 59024 60428
+<< metal2 >>
+rect 10080 63181 10192 63981
+rect 30128 63181 30240 63981
+rect 50176 63181 50288 63981
+rect 4256 0 4368 800
+rect 12880 0 12992 800
+rect 21504 0 21616 800
+rect 30128 0 30240 800
+rect 38752 0 38864 800
+rect 47376 0 47488 800
+rect 56000 0 56112 800
+<< obsm2 >>
+rect 924 63121 10020 63181
+rect 10252 63121 30068 63181
+rect 30300 63121 50116 63181
+rect 50348 63121 58772 63181
+rect 924 860 58772 63121
+rect 924 800 4196 860
+rect 4428 800 12820 860
+rect 13052 800 21444 860
+rect 21676 800 30068 860
+rect 30300 800 38692 860
+rect 38924 800 47316 860
+rect 47548 800 55940 860
+rect 56172 800 58772 860
+<< obsm3 >>
+rect 914 3108 58782 60900
+<< metal4 >>
+rect 4448 3076 4768 60428
+rect 19808 3076 20128 60428
+rect 35168 3076 35488 60428
+rect 50528 3076 50848 60428
+<< obsm4 >>
+rect 2156 60488 57764 60910
+rect 2156 7522 4388 60488
+rect 4828 7522 19748 60488
+rect 20188 7522 35108 60488
+rect 35548 7522 50468 60488
+rect 50908 7522 57764 60488
+<< labels >>
+rlabel metal2 s 4256 0 4368 800 6 clk
+port 1 nsew signal input
+rlabel metal2 s 30128 0 30240 800 6 divSel[0]
+port 2 nsew signal input
+rlabel metal2 s 38752 0 38864 800 6 divSel[1]
+port 3 nsew signal input
+rlabel metal2 s 47376 0 47488 800 6 divSel[2]
+port 4 nsew signal input
+rlabel metal2 s 56000 0 56112 800 6 divSel[3]
+port 5 nsew signal input
+rlabel metal2 s 21504 0 21616 800 6 enable
+port 6 nsew signal input
+rlabel metal2 s 50176 63181 50288 63981 6 qcomplex
+port 7 nsew signal output
+rlabel metal2 s 10080 63181 10192 63981 6 qcos
+port 8 nsew signal output
+rlabel metal2 s 30128 63181 30240 63981 6 qsin
+port 9 nsew signal output
+rlabel metal2 s 12880 0 12992 800 6 rst
+port 10 nsew signal input
+rlabel metal4 s 4448 3076 4768 60428 6 vdd
+port 11 nsew power bidirectional
+rlabel metal4 s 35168 3076 35488 60428 6 vdd
+port 11 nsew power bidirectional
+rlabel metal4 s 19808 3076 20128 60428 6 vss
+port 12 nsew ground bidirectional
+rlabel metal4 s 50528 3076 50848 60428 6 vss
+port 12 nsew ground bidirectional
+<< properties >>
+string FIXED_BBOX 0 0 60397 63981
+string LEFclass BLOCK
+string LEFview TRUE
+string GDS_END 4205758
+string GDS_FILE /mnt/c/Users/rmprice/Documents/Github/Trollo/openlane/user_WaveTbl/runs/22_12_05_10_15/results/signoff/WavePWM.magic.gds
+string GDS_START 443726
+<< end >>
+

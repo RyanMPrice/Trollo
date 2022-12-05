@@ -1,0 +1,99 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO clkmux2
+  CLASS BLOCK ;
+  FOREIGN clkmux2 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 80.000 BY 80.000 ;
+  PIN clka
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 19.600 0.000 20.160 4.000 ;
+    END
+  END clka
+  PIN clkb
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 59.360 0.000 59.920 4.000 ;
+    END
+  END clkb
+  PIN gclk
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 39.760 76.000 40.320 80.000 ;
+    END
+  END gclk
+  PIN select
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0.000 39.760 4.000 40.320 ;
+    END
+  END select
+  PIN vdd
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal4 ;
+        RECT 14.180 15.380 15.780 63.020 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 30.700 15.380 32.300 63.020 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 47.220 15.380 48.820 63.020 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 63.740 15.380 65.340 63.020 ;
+    END
+  END vdd
+  PIN vss
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal4 ;
+        RECT 22.440 15.380 24.040 63.020 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 38.960 15.380 40.560 63.020 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 55.480 15.380 57.080 63.020 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 72.000 15.380 73.600 63.020 ;
+    END
+  END vss
+  OBS
+      LAYER Metal1 ;
+        RECT 6.720 15.380 73.600 63.020 ;
+      LAYER Metal2 ;
+        RECT 9.100 75.700 39.460 76.000 ;
+        RECT 40.620 75.700 73.460 76.000 ;
+        RECT 9.100 4.300 73.460 75.700 ;
+        RECT 9.100 4.000 19.300 4.300 ;
+        RECT 20.460 4.000 59.060 4.300 ;
+        RECT 60.220 4.000 73.460 4.300 ;
+      LAYER Metal3 ;
+        RECT 4.000 40.620 73.510 62.860 ;
+        RECT 4.300 39.460 73.510 40.620 ;
+        RECT 4.000 15.540 73.510 39.460 ;
+  END
+END clkmux2
+END LIBRARY
+

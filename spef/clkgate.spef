@@ -1,0 +1,232 @@
+*SPEF "ieee 1481-1999"
+*DESIGN "clkgate"
+*DATE "11:11:11 Fri 11 11, 1111"
+*VENDOR "OpenRCX"
+*PROGRAM "Parallel Extraction"
+*VERSION "1.0"
+*DESIGN_FLOW "NAME_SCOPE LOCAL" "PIN_CAP NONE"
+*DIVIDER /
+*DELIMITER :
+*BUS_DELIMITER []
+*T_UNIT 1 NS
+*C_UNIT 1 PF
+*R_UNIT 1 OHM
+*L_UNIT 1 HENRY
+
+*NAME_MAP
+*1 clk
+*2 gate
+*3 gclk
+*6 _0_
+*7 _1_
+*8 clkp
+*9 net1
+*10 net2
+*11 net3
+*12 ANTENNA_input1_I
+*13 ANTENNA_input2_I
+*14 FILLER_0_2
+*15 FILLER_0_34
+*16 FILLER_0_37
+*17 FILLER_0_40
+*18 FILLER_0_58
+*19 FILLER_0_66
+*20 FILLER_0_72
+*21 FILLER_0_80
+*22 FILLER_1_2
+*23 FILLER_1_66
+*24 FILLER_1_70
+*25 FILLER_1_73
+*26 FILLER_2_18
+*27 FILLER_2_2
+*28 FILLER_2_26
+*29 FILLER_2_32
+*30 FILLER_2_34
+*31 FILLER_2_37
+*32 FILLER_2_69
+*33 FILLER_2_77
+*34 FILLER_3_13
+*35 FILLER_3_17
+*36 FILLER_3_2
+*37 FILLER_3_39
+*38 FILLER_3_49
+*39 FILLER_3_5
+*40 FILLER_3_65
+*41 FILLER_3_69
+*42 FILLER_3_73
+*43 FILLER_4_19
+*44 FILLER_4_2
+*45 FILLER_4_37
+*46 FILLER_4_44
+*47 FILLER_4_76
+*48 FILLER_4_80
+*49 FILLER_5_2
+*50 FILLER_5_66
+*51 FILLER_5_70
+*52 FILLER_5_73
+*53 FILLER_6_2
+*54 FILLER_6_34
+*55 FILLER_6_37
+*56 FILLER_6_41
+*57 FILLER_6_56
+*58 FILLER_6_64
+*59 FILLER_6_68
+*60 FILLER_6_72
+*61 FILLER_6_80
+*62 PHY_0
+*63 PHY_1
+*64 PHY_10
+*65 PHY_11
+*66 PHY_12
+*67 PHY_13
+*68 PHY_2
+*69 PHY_3
+*70 PHY_4
+*71 PHY_5
+*72 PHY_6
+*73 PHY_7
+*74 PHY_8
+*75 PHY_9
+*76 TAP_14
+*77 TAP_15
+*78 TAP_16
+*79 TAP_17
+*80 TAP_18
+*81 TAP_19
+*82 TAP_20
+*83 TAP_21
+*84 TAP_22
+*85 _2_
+*86 _3_
+*87 _4_
+*88 _5_
+*89 input1
+*90 input2
+*91 output3
+
+*PORTS
+clk I
+gate I
+gclk O
+
+*D_NET *1 0.002121
+*CONN
+*P clk I
+*I *12:I I *D gf180mcu_fd_sc_mcu7t5v0__antenna
+*I *89:I I *D gf180mcu_fd_sc_mcu7t5v0__dlyb_1
+*CAP
+1 clk 0.00065917
+2 *12:I 0
+3 *89:I 0.000401328
+4 *1:9 0.0010605
+*RES
+1 clk *1:9 4.905 
+2 *1:9 *89:I 15.93 
+3 *1:9 *12:I 4.5 
+*END
+
+*D_NET *2 0.000876745
+*CONN
+*P gate I
+*I *90:I I *D gf180mcu_fd_sc_mcu7t5v0__dlyb_1
+*I *13:I I *D gf180mcu_fd_sc_mcu7t5v0__antenna
+*CAP
+1 gate 0.000233845
+2 *90:I 0.000204527
+3 *13:I 0
+4 *2:7 0.000438373
+*RES
+1 gate *2:7 6.345 
+2 *2:7 *13:I 4.5 
+3 *2:7 *90:I 5.76 
+*END
+
+*D_NET *3 0.00175559
+*CONN
+*P gclk O
+*I *91:Z O *D gf180mcu_fd_sc_mcu7t5v0__clkbuf_3
+*CAP
+1 gclk 0.000877796
+2 *91:Z 0.000877796
+*RES
+1 *91:Z gclk 19.755 
+*END
+
+*D_NET *6 0.000941836
+*CONN
+*I *87:I I *D gf180mcu_fd_sc_mcu7t5v0__clkbuf_1
+*I *86:Z O *D gf180mcu_fd_sc_mcu7t5v0__and2_1
+*CAP
+1 *87:I 0.000268987
+2 *86:Z 0.000268987
+3 *87:I *86:A2 0.000377296
+4 *87:I *91:I 2.65666e-05
+*RES
+1 *86:Z *87:I 11.34 
+*END
+
+*D_NET *7 0.000640267
+*CONN
+*I *88:E I *D gf180mcu_fd_sc_mcu7t5v0__latq_1
+*I *85:ZN O *D gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+*CAP
+1 *88:E 0.000311731
+2 *85:ZN 0.000311731
+3 *88:E *88:D 1.68043e-05
+*RES
+1 *85:ZN *88:E 11.25 
+*END
+
+*D_NET *8 0.000751395
+*CONN
+*I *86:A2 I *D gf180mcu_fd_sc_mcu7t5v0__and2_1
+*I *88:Q O *D gf180mcu_fd_sc_mcu7t5v0__latq_1
+*CAP
+1 *86:A2 0.000164836
+2 *88:Q 0.000164836
+3 *86:A2 *86:A1 4.44281e-05
+4 *87:I *86:A2 0.000377296
+*RES
+1 *88:Q *86:A2 10.8 
+*END
+
+*D_NET *9 0.00205322
+*CONN
+*I *86:A1 I *D gf180mcu_fd_sc_mcu7t5v0__and2_1
+*I *85:I I *D gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+*I *89:Z O *D gf180mcu_fd_sc_mcu7t5v0__dlyb_1
+*CAP
+1 *86:A1 0.000217459
+2 *85:I 0.000401328
+3 *89:Z 0.00038561
+4 *9:5 0.0010044
+5 *86:A2 *86:A1 4.44281e-05
+*RES
+1 *89:Z *9:5 6.93 
+2 *9:5 *85:I 15.93 
+3 *9:5 *86:A1 5.94 
+*END
+
+*D_NET *10 0.000864866
+*CONN
+*I *88:D I *D gf180mcu_fd_sc_mcu7t5v0__latq_1
+*I *90:Z O *D gf180mcu_fd_sc_mcu7t5v0__dlyb_1
+*CAP
+1 *88:D 0.000424031
+2 *90:Z 0.000424031
+3 *88:E *88:D 1.68043e-05
+*RES
+1 *90:Z *88:D 12.06 
+*END
+
+*D_NET *11 0.000921628
+*CONN
+*I *91:I I *D gf180mcu_fd_sc_mcu7t5v0__clkbuf_3
+*I *87:Z O *D gf180mcu_fd_sc_mcu7t5v0__clkbuf_1
+*CAP
+1 *91:I 0.000447531
+2 *87:Z 0.000447531
+3 *87:I *91:I 2.65666e-05
+*RES
+1 *87:Z *91:I 12.06 
+*END

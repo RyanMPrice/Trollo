@@ -31,8 +31,8 @@ set ::env(CLOCK_PORT) "clk"
 set ::env(CLOCK_NET) "clk"
 set ::env(CLOCK_PERIOD) "50.0"
 
-set ::env(FP_SIZING) absolute
-set ::env(DIE_AREA) "0 0 500 500"
+#set ::env(FP_SIZING) absolute
+#set ::env(DIE_AREA) "0 0 500 500"
 
 set ::env(FP_PIN_ORDER_CFG) $::env(DESIGN_DIR)/pin_order.cfg
 

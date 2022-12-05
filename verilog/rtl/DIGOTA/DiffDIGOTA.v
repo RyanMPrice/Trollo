@@ -1,6 +1,6 @@
 
 //Be sure to buffer the outputs before feeding back into this module
-module DiffDIGOTA ( 
+module DiffDigota ( 
   input INpb
 , input INmb
 , input OUTp

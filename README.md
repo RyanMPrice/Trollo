@@ -14,8 +14,19 @@ Refer to [README](docs/source/index.rst) for this sample project documentation.
 This design uses design rules for the gf180mcuC PDK.
 
 This project implements a 16 bit RISC themed processor for educational purposes. 
+  --would if the PDK were complete
+  --Since the number of IO pins are limited the Address/Databus are merged into a single external bus.
 
-Since the number of IO pins are limited the Address/Databus are merged into a single external bus.
+This project provides experimental digital blocks to explore and learn about the idea-to-silicon pipeline.
+
+Blocks included
+  clkgate
+    simple latch and a bit of logic to safely control a clock signal with logic
+  clkmux2
+    simple switch that allows two clock signals to be switched between without glitching
+  DIGOTA
+    these are purely experimental
+  WavePWm
+    waveform synthesis from wavetable rom memory
 
 More documentation to come in the following days!
-

@@ -1,0 +1,66 @@
+magic
+tech gf180mcuC
+magscale 1 5
+timestamp 1670260626
+<< obsm1 >>
+rect 672 1538 7360 6302
+<< metal2 >>
+rect 3976 7600 4032 8000
+rect 1960 0 2016 400
+rect 5936 0 5992 400
+<< obsm2 >>
+rect 910 7570 3946 7600
+rect 4062 7570 7346 7600
+rect 910 430 7346 7570
+rect 910 400 1930 430
+rect 2046 400 5906 430
+rect 6022 400 7346 430
+<< metal3 >>
+rect 0 3976 400 4032
+<< obsm3 >>
+rect 400 4062 7351 6286
+rect 430 3946 7351 4062
+rect 400 1554 7351 3946
+<< metal4 >>
+rect 1418 1538 1578 6302
+rect 2244 1538 2404 6302
+rect 3070 1538 3230 6302
+rect 3896 1538 4056 6302
+rect 4722 1538 4882 6302
+rect 5548 1538 5708 6302
+rect 6374 1538 6534 6302
+rect 7200 1538 7360 6302
+<< labels >>
+rlabel metal2 s 1960 0 2016 400 6 clka
+port 1 nsew signal input
+rlabel metal2 s 5936 0 5992 400 6 clkb
+port 2 nsew signal input
+rlabel metal2 s 3976 7600 4032 8000 6 gclk
+port 3 nsew signal output
+rlabel metal3 s 0 3976 400 4032 6 select
+port 4 nsew signal input
+rlabel metal4 s 1418 1538 1578 6302 6 vdd
+port 5 nsew power bidirectional
+rlabel metal4 s 3070 1538 3230 6302 6 vdd
+port 5 nsew power bidirectional
+rlabel metal4 s 4722 1538 4882 6302 6 vdd
+port 5 nsew power bidirectional
+rlabel metal4 s 6374 1538 6534 6302 6 vdd
+port 5 nsew power bidirectional
+rlabel metal4 s 2244 1538 2404 6302 6 vss
+port 6 nsew ground bidirectional
+rlabel metal4 s 3896 1538 4056 6302 6 vss
+port 6 nsew ground bidirectional
+rlabel metal4 s 5548 1538 5708 6302 6 vss
+port 6 nsew ground bidirectional
+rlabel metal4 s 7200 1538 7360 6302 6 vss
+port 6 nsew ground bidirectional
+<< properties >>
+string FIXED_BBOX 0 0 8000 8000
+string LEFclass BLOCK
+string LEFview TRUE
+string GDS_END 136242
+string GDS_FILE /mnt/c/Users/rmprice/Documents/Github/Trollo/openlane/user_clkmux2/runs/22_12_05_10_15/results/signoff/clkmux2.magic.gds
+string GDS_START 70508
+<< end >>
+
