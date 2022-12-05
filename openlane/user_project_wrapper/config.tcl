@@ -30,49 +30,32 @@ set ::env(DESIGN_NAME) user_project_wrapper
 ## Source Verilog Files
 set ::env(VERILOG_FILES) "\
 	$::env(CARAVEL_ROOT)/verilog/rtl/defines.v \
-	$::env(CARAVEL_ROOT)/verilog/rtl/Wishbone/WishboneSlave.v \
 	$::env(DESIGN_DIR)/../../verilog/rtl/user_project_wrapper.v"
 
 ## Clock configurations
 set ::env(CLOCK_PORT) "user_clock2"
-set ::env(CLOCK_NET) "clk"
+set ::env(CLOCK_NET) "mprj.clk"
 
-set ::env(CLOCK_PERIOD) "24.0"
+set ::env(CLOCK_PERIOD) "10"
 
 ## Internal Macros
 ### Macro PDN Connections
 set ::env(FP_PDN_MACRO_HOOKS) "\
 	mprj vdd vss vdd vss"
 
+### Macro Placement
+set ::env(MACRO_PLACEMENT_CFG) $::env(DESIGN_DIR)/macro.cfg
+
 ### Black-box verilog and views
 set ::env(VERILOG_FILES_BLACKBOX) "\
 	$::env(CARAVEL_ROOT)/verilog/rtl/defines.v \
-	$::env(CARAVEL_ROOT)/verilog/rtl/DIGOTA/DiffDigota.v \
-	$::env(CARAVEL_ROOT)/verilog/rtl/DIGOTA/DIGOTA.v \
-	$::env(CARAVEL_ROOT)/verilog/rtl/Clocks/clkgate.v \
-	$::env(CARAVEL_ROOT)/verilog/rtl/Clocks/clkmux2.v \
-	$::env(CARAVEL_ROOT)/verilog/rtl/WaveTbl/WavePWM.v"
+	$::env(DESIGN_DIR)/../../verilog/rtl/user_proj_example.v"
 
 set ::env(EXTRA_LEFS) "\
-	$::env(CARAVEL_ROOT)/../../lef/DiffDigota.lef \
-	$::env(CARAVEL_ROOT)/../../lef/DIGOTA.lef \
-	$::env(CARAVEL_ROOT)/../../lef/clkgate.lef \
-	$::env(CARAVEL_ROOT)/../../lef/clkmux2.lef \
-	$::env(CARAVEL_ROOT)/../../lef/WavePWM.lef"
+	$::env(DESIGN_DIR)/../../lef/user_proj_example.lef"
 
 set ::env(EXTRA_GDS_FILES) "\
-	$::env(CARAVEL_ROOT)/../../gds/DiffDigota.gds \
-	$::env(CARAVEL_ROOT)/../../gds/DIGOTA.gds \
-	$::env(CARAVEL_ROOT)/../../gds/clkgate.gds \
-	$::env(CARAVEL_ROOT)/../../gds/clkmux2.gds \
-	$::env(CARAVEL_ROOT)/../../gds/WavePWM.gds"
-
-set ::env(EXTRA_LIBS) "\
-    $::env(DESIGN_DIR)/../../lib/DiffDigota.lib \
-    $::env(DESIGN_DIR)/../../lib/DIGOTA.lib \
-    $::env(CARAVEL_ROOT)/../../lib/clkgate.lib\
-    $::env(CARAVEL_ROOT)/../../lib/clkmux2.lib\
-    $::env(CARAVEL_ROOT)/../../lib/WavePWM.lib"
+	$::env(DESIGN_DIR)/../../gds/user_proj_example.gds"
 
 set ::env(RT_MAX_LAYER) {Metal4}
 
