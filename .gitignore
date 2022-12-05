@@ -6,5 +6,4 @@
 *.lst
 *.vcd
 *.gtkw
-caravel/
-mgmt_core_wrapper/
+venv
