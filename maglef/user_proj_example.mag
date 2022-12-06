@@ -1,7 +1,7 @@
 magic
 tech gf180mcuC
 magscale 1 5
-timestamp 1670265865
+timestamp 1670288585
 << obsm1 >>
 rect 672 855 99288 98422
 << metal2 >>
@@ -334,7 +334,7 @@ rect 91392 0 91448 400
 rect 91672 0 91728 400
 rect 91952 0 92008 400
 << obsm2 >>
-rect 798 99570 1874 99666
+rect 742 99570 1874 99666
 rect 1990 99570 5570 99666
 rect 5686 99570 9266 99666
 rect 9382 99570 12962 99666
@@ -361,9 +361,9 @@ rect 83302 99570 86882 99666
 rect 86998 99570 90578 99666
 rect 90694 99570 94274 99666
 rect 94390 99570 97970 99666
-rect 98086 99570 99162 99666
-rect 798 430 99162 99570
-rect 798 400 7922 430
+rect 98086 99570 99218 99666
+rect 742 430 99218 99570
+rect 742 400 7922 430
 rect 8038 400 8202 430
 rect 8318 400 8482 430
 rect 8598 400 8762 430
@@ -664,7 +664,7 @@ rect 90918 400 91082 430
 rect 91198 400 91362 430
 rect 91478 400 91642 430
 rect 91758 400 91922 430
-rect 92038 400 99162 430
+rect 92038 400 99218 430
 << metal3 >>
 rect 0 98168 400 98224
 rect 99600 98000 100000 98056
@@ -936,10 +936,10 @@ rect 79024 1538 79184 98422
 rect 86704 1538 86864 98422
 rect 94384 1538 94544 98422
 << obsm4 >>
-rect 3318 31873 9874 69375
-rect 10094 31873 17554 69375
-rect 17774 31873 25234 69375
-rect 25454 31873 25522 69375
+rect 3822 35177 9874 69991
+rect 10094 35177 17554 69991
+rect 17774 35177 25234 69991
+rect 25454 35177 27762 69991
 << labels >>
 rlabel metal3 s 99600 1904 100000 1960 6 io_in[0]
 port 1 nsew signal input
@@ -1801,8 +1801,8 @@ port 417 nsew signal input
 string FIXED_BBOX 0 0 100000 100000
 string LEFclass BLOCK
 string LEFview TRUE
-string GDS_END 7581470
-string GDS_FILE /mnt/c/Users/rmprice/Documents/Github/Trollo/openlane/user_proj_example/runs/22_12_05_11_40/results/signoff/user_proj_example.magic.gds
-string GDS_START 336942
+string GDS_END 7590336
+string GDS_FILE /mnt/c/Users/rmprice/Documents/Github/Trollo/openlane/user_proj_example/runs/22_12_05_17_59/results/signoff/user_proj_example.magic.gds
+string GDS_START 345676
 << end >>
 

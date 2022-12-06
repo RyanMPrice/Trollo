@@ -131,7 +131,7 @@ module user_proj_example #(
   , .INmb    (io_in    [12]) //Analog io_in[12]
   , .OUTp    (io_in    [13]) //Digital
   , .OUTm    (io_in    [14]) //Digital
-  , .oe      (enable       ) //Digital
+  , .oe      (den          ) //Digital
   
   , .ompmos  (io_out   [15]) //Digital
   , .omnmos  (io_out   [16]) //Digital
@@ -158,7 +158,7 @@ module user_proj_example #(
     , .gclk  (io_out[24])
   );
   
-  assign io_oeb[28:25] = 1'b1;
+  assign io_oeb[28:25] = 4'b1111;
   assign io_oeb[29] = 1'b0;
   assign io_oeb[30] = 1'b0;
   assign io_oeb[31] = 1'b0;
@@ -166,7 +166,7 @@ module user_proj_example #(
       .clk     (clk      )
     , .rst     (rst      )
     
-    , .enable  (enable)
+    , .enable  (den)
     , .divSel  (io_in[28:25])
     
     , .qcos    (io_out[31])
